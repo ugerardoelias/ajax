@@ -1,0 +1,48 @@
+main {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #abd904;
+    background-image: url("imagenes/yellow-submarine.jpg.png");
+    background-repeat: repeat-x repeat-y;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#revolution {
+    display: inline-block;
+    border: 2px solid white;
+    background-color: aqua;
+    margin-top: 150px;
+}
+
+#big-bolt {
+    display: inline-block;
+    border: 2px solid white;
+    background-color: aqua;
+    margin-top: 150px;
+}
+
+#penny-lane {
+    display: inline-block;
+    border: 2px solid white;
+    background-color: aqua;
+    margin-top: 150px;
+}
+
+#fly {
+    display: inline-block;
+    border: 2px solid white;
+    background-color: aqua;
+    margin-top: 150px;
+}
+
+h3 {
+    padding-left: 25px;
+}
+
+.caracteristicas {
+    list-style: square;
+}

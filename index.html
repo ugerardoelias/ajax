@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mr.Steele</title>
+        <meta name="description" content="pagina de mr. steele">
+        <meta name="keywords" content="drone, uav, mr. steele">
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="ageneral.css">
+        <link rel="stylesheet" type="text/css" href="index.css">        
+    </head>
+    <body>
+        <header>
+            <section>
+                <a href="#index" id="index"><h1>Mr. Steele</h1></a>
+            </section>
+            <section class="contenedor">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#equipo" id="equipo"> MI EQUIPO</a>
+                        </li>
+                        <li>
+                            <a href="#drones" id="drones"> MIS DRONES</a>
+                        </li>
+                        <li>
+                            <a href="#album" id="album"> ALBUM DE FOTOS</a>
+                        </li>
+                        <li>
+                            <a href="#contacto" id="contacto"> CONTACTANOS</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <main>
+            <section id="portada">
+                <img src="imagenes/person.jpg.png">
+            </section>
+            <section id="biografia">
+                <p>Bienvenidos a mi pagina, mi nombre es Steele Davis o como me conocen mejor, "Mr. Steele". Soy un meanico de drones y un aun mejor piloto de drones en primera persona que estudio en la universidad del norte de georgia, eeuu y me gradue en mantenimiento y meanica tecnologica. Ese fue mi 1er paso para empezar a crear mis propios drones y llegar a lo que soy ahora, un creador de contenido y acrobata de uav utilizando los drones que yo mismo creo y los puedes ver en la seccion de mis drones</p>
+            </section>
+        </main>            
+        <footer>
+            <section>
+                <p><small>Mr.Steele copyright© 2021</small></p>
+            </section>
+            <section>
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/user/MrSteeledavis">
+                        <img src="imagenes/youtube.jpg.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/mrsteelefpv/">
+                        <img src="imagenes/instagram.jpg.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/mrsteelefpv">
+                        <img src="imagenes/twitter.jpg.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/steele-davis-b176aa100/">
+                        <img src="imagenes/linkedin.jpg.png">
+                        </a>
+                    </li>
+                </ul>
+            </section>            
+        </footer>
+        <script>
+
+            function obtener_sitio(recurso_adquirir) {
+                var mi_main = document.querySelector("main");
+
+                var mi_peticion = new XMLHttpRequest();
+            
+                console.log("ReadyState="+mi_peticion.readyState)
+
+                mi_peticion.open("GET", recurso_adquirir, true);
+                
+                console.log("ReadyState="+mi_peticion.readyState)
+
+                mi_peticion.onreadystatechange = function() {
+                    console.log("ReadyState="+mi_peticion.readyState)
+
+                    if (mi_peticion.readyState == 4) {
+                        console.log("termino");
+                        console.log(mi_peticion.response);
+                        mi_main.innerHTML = mi_peticion.response;
+                    }
+                }
+
+                mi_peticion.send();
+            }
+
+            var boton_index = document.querySelector("#index")
+            var boton_equipo = document.querySelector("#equipo")
+            var boton_drones = document.querySelector("#drones")
+            var boton_album = document.querySelector("#album")
+            var boton_contacto = document.querySelector("#contacto")
+
+            boton_index.addEventListener("click", function() {
+                obtener_sitio("index.html")
+            });
+            boton_equipo.addEventListener("click", function() {
+                obtener_sitio("mi_equipo.html")
+            });
+            boton_drones.addEventListener("click", function() {
+                obtener_sitio("mis-drones.html")
+            });
+            boton_album.addEventListener("click", function() {
+                obtener_sitio("album.html")
+            });
+            boton_contacto.addEventListener("click", function() {
+                obtener_sitio("contactanos.html")
+            });
+
+            obtener_sitio("index.html")
+
+        </script>
+    </body>
+</html>

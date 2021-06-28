@@ -1,0 +1,38 @@
+main {
+    position: relative;
+    margin-top: 113.4px;
+    margin-bottom: 40px;
+    overflow-y: scroll;
+    background-color: #abd904;
+    background-image: url("imagenes/yellow-submarine.jpg.png");
+    background-repeat: repeat-x repeat-y;
+}
+
+#esteban {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    margin-left: 10px;
+    border: 2px solid white;
+    padding: 5px;
+
+}
+
+#marcos {
+    display: block;
+    position: absolute;
+    top: 250px;
+    margin-left: 10px;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+#firulais {
+    display: block;
+    position: absolute;
+    top: 523px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    border: 2px solid white;
+    padding: 5px;
+}

@@ -1,0 +1,35 @@
+main {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #abd904;
+    background-image: url("imagenes/yellow-submarine.jpg.png");
+    background-repeat: repeat-x repeat-y;
+}
+
+#formulario {
+    position: absolute;
+    border: 2px solid white;
+    background-color: blue;
+    width: 50%;
+    height: 400px;
+    padding: 10px;
+    top: 150px;
+    left: 20px;
+}
+
+#comentario {
+    height: 200px;
+}
+
+#boton {
+    position: absolute;
+    left: 600px;
+    top: 375px;
+}
+
+#foto {
+    position: absolute;
+    right: 150px;
+    top: 300px;
+}
